@@ -7,7 +7,6 @@ public class Semaphore {
 
     // take a place, wait if none is free
     public synchronized void P() {
-        boolean interrupted = false;
         while (value <= 0) {                 // no places
             try {
                 wait();                      // releases the lock while waiting
