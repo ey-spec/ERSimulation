@@ -1,6 +1,6 @@
 public class TreatmentRooms {
-    private static final int num_rooms = 2;
-    private final Semaphore rooms = new Semaphore(num_rooms);
+    private static final int NUM_ROOMS = 2;
+    private final Semaphore rooms = new Semaphore(NUM_ROOMS);
 
     // Doctor calls this: true if a room was acquired within ms milliseconds
     public boolean tryAcquire(long ms) {

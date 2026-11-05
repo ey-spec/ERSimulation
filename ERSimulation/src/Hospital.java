@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Hospital {
-    private static final long ROOM_TIMOUT_MS = 3000;
+    private static final long ROOM_TIMEOUT_MS = 3000;
 
     private static int readPositiveInt(Scanner sc, String prompt) {
         System.out.print(prompt);
@@ -32,12 +32,12 @@ public class Hospital {
 
         Doctor[] doctors = new Doctor[numberOfDoctors];
         for (int i = 0; i < numberOfDoctors; i++) {
-            doctors[i] = new Doctor(i, waitingRoom, treatmentRooms, ROOM_TIMOUT_MS);
+            doctors[i] = new Doctor(i+1, waitingRoom, treatmentRooms, ROOM_TIMEOUT_MS);
         }
 
         Patient[] patients = new Patient[numberOfPatients];
         for (int i = 0; i < numberOfPatients; i++) {
-            patients[i] = new Patient(i, waitingRoom, done);
+            patients[i] = new Patient(i+1, waitingRoom, done);
         }
 
         StringBuilder list = new StringBuilder();
