@@ -3,7 +3,6 @@ public class WaitingRoom {
     private final int capacity;
     private int inptr = 0;                    // next free slot to write
     private int outptr = 0;                   // next slot to read
-
     private final Semaphore spaces;           // free seats
     private final Semaphore elements = new Semaphore(0);  // patients inside
     private final Semaphore mutex = new Semaphore(1);     // protects inptr/outptr
